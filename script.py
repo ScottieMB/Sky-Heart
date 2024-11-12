@@ -40,7 +40,7 @@ button_y = 10
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # Timer settings
-target_date = datetime(2024, 10, 31, 19, 30)
+target_date = os.getenv('YOUR_DATETIME')
 
 # Get the directory of the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
