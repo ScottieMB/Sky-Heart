@@ -46,7 +46,7 @@ target_date = os.getenv('YOUR_DATETIME')
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load the font using an absolute path
-font_path = os.path.join(script_dir, 'Grand9kPixel.ttf')
+font_path = os.path.join(script_dir, 'assets/Grand9kPixel.ttf')
 font = pygame.font.Font(font_path, 15)
 
 # Hardcoded list of songs (format - spotify:track:(spotify ID))
@@ -135,17 +135,17 @@ def load_images(weather_condition, weather_temperature, night_time, weather_icon
 
     # Load background images based on the weather condition
     if night_time:
-        background_image = pygame.image.load(os.path.join(script_dir, 'nighttime.jpg'))  # Load nighttime image
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/nighttime.jpg'))  # Load nighttime image
     elif weather_condition == "Clear":
-        background_image = pygame.image.load(os.path.join(script_dir, 'sun.png.jpg'))
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/sun.png.jpg'))
     elif weather_condition == "Rain":
-        background_image = pygame.image.load(os.path.join(script_dir, 'rain.png'))
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/rain.png'))
     elif weather_condition == "Snow":
-        background_image = pygame.image.load(os.path.join(script_dir, 'snow.png.jpg'))
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/snow.png.jpg'))
     elif weather_condition == "Clouds":
-        background_image = pygame.image.load(os.path.join(script_dir, 'cloudy.jpg'))
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/cloudy.jpg'))
     else:
-        background_image = pygame.image.load(os.path.join(script_dir, 'sun.png.jpg'))
+        background_image = pygame.image.load(os.path.join(script_dir, 'assets/sun.png.jpg'))
 
     background_image = pygame.transform.scale(background_image, (WIDTH, HEIGHT))  # Scale image
     print(f"Current weather condition: {weather_condition}")
@@ -229,7 +229,7 @@ def draw_timer(screen, current_message, current_temperature):
 # Function to load the play button
 def load_play_button_image():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    play_button_image = pygame.image.load(os.path.join(script_dir, 'play.png')) 
+    play_button_image = pygame.image.load(os.path.join(script_dir, 'assets/play.png')) 
     return pygame.transform.scale(play_button_image, (BUTTON_WIDTH, BUTTON_HEIGHT))
 
 # Function to draw the play button at the top right of the screen
@@ -243,7 +243,7 @@ def draw_circle_of_hearts(screen, heart_image, num_hearts, radius, angle_offset,
     angle_between_hearts = (360 / num_hearts) * spacing_factor  # Adjust angle for spacing
 
     # Load heart image and scale it
-    heart_image = pygame.image.load(os.path.join(script_dir, 'heart.png')).convert_alpha()
+    heart_image = pygame.image.load(os.path.join(script_dir, 'assets/heart.png')).convert_alpha()
     heart_image = pygame.transform.scale(heart_image, (50, 50))
 
     # Main loop to iterate through the number of hearts to put in a circle and rotate
