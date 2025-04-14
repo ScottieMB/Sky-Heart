@@ -9,7 +9,7 @@ caption = pygame.display.set_caption.os.getenv('YOUR_CAPTION')
 import src.songs as songs
 import src.weather as weather
 import src.images as images
-import messages
+import src.messages as messages
 import src.config as config
 
 # Set up the display

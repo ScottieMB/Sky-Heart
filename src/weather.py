@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 import os
 import random
-import messages
+import src.messages as messages
 
 # Weather API
 API_KEY = os.getenv('WEATHER_API_KEY')
